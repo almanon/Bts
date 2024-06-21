@@ -1,22 +1,22 @@
--- system °èÁ¤À¸·Î ÀÛ¾÷ÇÒ ³»¿ë
--- btsÀÌ¶õ ÀÌ¸§ÀÇ °èÁ¤ »ý¼º
+-- system ê³„ì •ìœ¼ë¡œ ìž‘ì—…í•  ë‚´ìš©
+-- btsì´ëž€ ì´ë¦„ì˜ ê³„ì • ìƒì„±
 create user bts IDENTIFIED by 12345 account unlock;
--- bts¿¡ Å×ÀÌºí ½ºÆäÀÌ½º °ü·Ã ±ÇÇÑ ºÎ¿©(°è¼Ó »ý¼º)
+-- btsì— í…Œì´ë¸” ìŠ¤íŽ˜ì´ìŠ¤ ê´€ë ¨ ê¶Œí•œ ë¶€ì—¬(ê³„ì† ìƒì„±)
 grant unlimited tablespace to bts;
--- ±âº» Å×ÀÌºí½ºÆäÀÌ½º ¼³Á¤
+-- ê¸°ë³¸ í…Œì´ë¸”ìŠ¤íŽ˜ì´ìŠ¤ ì„¤ì •
 ALTER USER bts DEFAULT TABLESPACE USERS;
--- ÀÓ½Ã Å×ÀÌºí½ºÆäÀÌ½º ¼³Á¤
+-- ìž„ì‹œ í…Œì´ë¸”ìŠ¤íŽ˜ì´ìŠ¤ ì„¤ì •
 ALTER USER bts TEMPORARY TABLESPACE TEMP;
--- bts »ç¿ëÀÚ °èÁ¤¿¡ ±ÇÇÑ ºÎ¿©
+-- bts ì‚¬ìš©ìž ê³„ì •ì— ê¶Œí•œ ë¶€ì—¬
 grant connect, resource to bts;
--- bts »ç¿ëÀÚ °èÁ¤ Á¢¼Ó ±ÇÇÑ ºÎ¿©
+-- bts ì‚¬ìš©ìž ê³„ì • ì ‘ì† ê¶Œí•œ ë¶€ì—¬
 grant create session to bts;
--- bts »ç¿ëÀÚ °èÁ¤¿¡ Å×ÀÌºí »ý¼º ±ÇÇÑ ºÎ¿©
+-- bts ì‚¬ìš©ìž ê³„ì •ì— í…Œì´ë¸” ìƒì„± ê¶Œí•œ ë¶€ì—¬
 grant create table to bts;
--- ´Ù¸¥ »ç¶÷µéÀº system°èÁ¤ÀÇ ÀÌ ¸í·É¾î¸¦ ½ÇÇàÇÏ¸é µÊ(system °èÁ¤À¸·Î)
+-- ë‹¤ë¥¸ ì‚¬ëžŒë“¤ì€ systemê³„ì •ì˜ ì´ ëª…ë ¹ì–´ë¥¼ ì‹¤í–‰í•˜ë©´ ë¨(system ê³„ì •ìœ¼ë¡œ)
 conn bts/12345;
 
--- Å×ÀÌºíµé Á¦°Å ÄÚµå
+-- í…Œì´ë¸”ë“¤ ì œê±° ì½”ë“œ
  DROP TABLE MEMBER;
  DROP TABLE ESCALATOR;
  DROP TABLE ELEVATOR;
@@ -26,7 +26,7 @@ conn bts/12345;
  DROP TABLE CONGESTION;
 
 
--- È¸¿ø Å×ÀÌºí »ý¼º
+-- íšŒì› í…Œì´ë¸” ìƒì„±
 Create Table Member(
     mno NUMBER(4)
         CONSTRAINT MEMB_NO_PK PRIMARY KEY,
@@ -42,179 +42,178 @@ Create Table Member(
         CONSTRAINT MEMB_ISSHOW_NN NOT NULL
 );
 
--- ¿¡½ºÄÃ·¹ÀÌÅÍ Å×ÀÌºí »ý¼º
+-- ì—ìŠ¤ì»¬ë ˆì´í„° í…Œì´ë¸” ìƒì„±
 CREATE TABLE ESCALATOR(
-    "ÀÏ·Ã¹øÈ£" NUMBER
+    "ì¼ë ¨ë²ˆí˜¸" NUMBER
         CONSTRAINT ESC_NO_PK PRIMARY KEY,
-    "Ã¶µµ¿î¿µ±â°ü¸í" VARCHAR2(4000 CHAR),
-    "¿î¿µ³ë¼±¸í" VARCHAR2(4000 CHAR),
-    "¿ª¸í" VARCHAR2(4000 CHAR),
-    "»óÇÏÇà±¸ºÐ" VARCHAR2(4000 CHAR),
-    "(±ÙÁ¢)ÃâÀÔ±¸¹øÈ£" VARCHAR2(4000 CHAR),
-    "½ÃÀÛÃþ(Áö»ó/ÁöÇÏ)" VARCHAR2(4000 CHAR),
-    "½ÃÀÛÃþ(¿îÇà¿ªÃþ)" VARCHAR2(4000 CHAR),
-    "½ÃÀÛÃþ(»ó¼¼À§Ä¡)" VARCHAR2(4000 CHAR),
-    "Á¾·áÃþ(Áö»ó/ÁöÇÏ)" VARCHAR2(4000 CHAR),
-    "Á¾·áÃþ(¿îÇà¿ªÃþ)" VARCHAR2(4000 CHAR),
-    "Á¾·áÃþ(»ó¼¼À§Ä¡)" VARCHAR2(4000 CHAR),
-    "½Â°­±â »óÅÂ" VARCHAR2(4000 CHAR),
-    "½Â°­±âÇüÆø" VARCHAR2(4000 CHAR)
+    "ì² ë„ìš´ì˜ê¸°ê´€ëª…" VARCHAR2(4000 CHAR),
+    "ìš´ì˜ë…¸ì„ ëª…" VARCHAR2(4000 CHAR),
+    "ì—­ëª…" VARCHAR2(4000 CHAR),
+    "ìƒí•˜í–‰êµ¬ë¶„" VARCHAR2(4000 CHAR),
+    "(ê·¼ì ‘)ì¶œìž…êµ¬ë²ˆí˜¸" VARCHAR2(4000 CHAR),
+    "ì‹œìž‘ì¸µ(ì§€ìƒ/ì§€í•˜)" VARCHAR2(4000 CHAR),
+    "ì‹œìž‘ì¸µ(ìš´í–‰ì—­ì¸µ)" VARCHAR2(4000 CHAR),
+    "ì‹œìž‘ì¸µ(ìƒì„¸ìœ„ì¹˜)" VARCHAR2(4000 CHAR),
+    "ì¢…ë£Œì¸µ(ì§€ìƒ/ì§€í•˜)" VARCHAR2(4000 CHAR),
+    "ì¢…ë£Œì¸µ(ìš´í–‰ì—­ì¸µ)" VARCHAR2(4000 CHAR),
+    "ì¢…ë£Œì¸µ(ìƒì„¸ìœ„ì¹˜)" VARCHAR2(4000 CHAR),
+    "ìŠ¹ê°•ê¸° ìƒíƒœ" VARCHAR2(4000 CHAR),
+    "ìŠ¹ê°•ê¸°í˜•í­" VARCHAR2(4000 CHAR)
 );
 
--- ¿¤¸®º£ÀÌÅÍ Å×ÀÌºí »ý¼º
+-- ì—˜ë¦¬ë² ì´í„° í…Œì´ë¸” ìƒì„±
 CREATE TABLE ELEVATOR(
-    "ÀÏ·Ã¹øÈ£" NUMBER
+    "ì¼ë ¨ë²ˆí˜¸" NUMBER
         CONSTRAINT ELE_NO_PK PRIMARY KEY,
-    "Ã¶µµ¿î¿µ±â°ü¸í" VARCHAR2(4000 CHAR),
-    "¿î¿µ³ë¼±¸í" VARCHAR2(4000 CHAR),
-    "¿ª¸í" VARCHAR2(4000 CHAR),
-    "(±ÙÁ¢)ÃâÀÔ±¸¹øÈ£" VARCHAR2(4000 CHAR),
-    "»ó¼¼À§Ä¡" VARCHAR2(4000 CHAR),
-    "½ÃÀÛÃþ(Áö»ó/ÁöÇÏ)" VARCHAR2(4000 CHAR),
-    "½ÃÀÛÃþ(¿îÇà¿ªÃþ)" VARCHAR2(4000 CHAR),
-    "Á¾·áÃþ(Áö»ó/ÁöÇÏ)" VARCHAR2(4000 CHAR),
-    "Á¾·áÃþ(¿îÇà¿ªÃþ)" VARCHAR2(4000 CHAR),
-    "Á¤¿ø(ÀÎ¿ø¼ö)" VARCHAR2(4000 CHAR),
-    "Á¤¿ø(Áß·®)(kg)" VARCHAR2(4000 CHAR),
-    "½Â°­±â»óÅÂ" VARCHAR2(4000 CHAR)
+    "ì² ë„ìš´ì˜ê¸°ê´€ëª…" VARCHAR2(4000 CHAR),
+    "ìš´ì˜ë…¸ì„ ëª…" VARCHAR2(4000 CHAR),
+    "ì—­ëª…" VARCHAR2(4000 CHAR),
+    "(ê·¼ì ‘)ì¶œìž…êµ¬ë²ˆí˜¸" VARCHAR2(4000 CHAR),
+    "ìƒì„¸ìœ„ì¹˜" VARCHAR2(4000 CHAR),
+    "ì‹œìž‘ì¸µ(ì§€ìƒ/ì§€í•˜)" VARCHAR2(4000 CHAR),
+    "ì‹œìž‘ì¸µ(ìš´í–‰ì—­ì¸µ)" VARCHAR2(4000 CHAR),
+    "ì¢…ë£Œì¸µ(ì§€ìƒ/ì§€í•˜)" VARCHAR2(4000 CHAR),
+    "ì¢…ë£Œì¸µ(ìš´í–‰ì—­ì¸µ)" VARCHAR2(4000 CHAR),
+    "ì •ì›(ì¸ì›ìˆ˜)" VARCHAR2(4000 CHAR),
+    "ì •ì›(ì¤‘ëŸ‰)(kg)" VARCHAR2(4000 CHAR),
+    "ìŠ¹ê°•ê¸°ìƒíƒœ" VARCHAR2(4000 CHAR)
 );
 
--- ÈÙÃ¼¾î ¸®ÇÁÆ® Å×ÀÌºí »ý¼º
+-- íœ ì²´ì–´ ë¦¬í”„íŠ¸ í…Œì´ë¸” ìƒì„±
 CREATE TABLE CHAIRLIFT(
-    "ÀÏ·Ã¹øÈ£" NUMBER
+    "ì¼ë ¨ë²ˆí˜¸" NUMBER
         CONSTRAINT LIFT_NO_PK PRIMARY KEY,
-    "Ã¶µµ¿î¿µ±â°ü¸í" VARCHAR2(4000 CHAR),
-    "¿î¿µ³ë¼±¸í" VARCHAR2(4000 CHAR),
-    "¿ª¸í" VARCHAR2(4000 CHAR),
-    "(±ÙÁ¢)ÃâÀÔ±¸¹øÈ£" VARCHAR2(4000 CHAR),
-    "½ÃÀÛÃþ(Áö»ó/ÁöÇÏ)" VARCHAR2(4000 CHAR),
-    "½ÃÀÛÃþ(¿îÇà¿ªÃþ)" VARCHAR2(4000 CHAR),
-    "½ÃÀÛÃþ(»ó¼¼À§Ä¡)" VARCHAR2(4000 CHAR),
-    "Á¾·áÃþ(Áö»ó/ÁöÇÏ)" VARCHAR2(4000 CHAR),
-    "Á¾·áÃþ(¿îÇà¿ªÃþ)" VARCHAR2(4000 CHAR),
-    "Á¾·áÃþ(»ó¼¼À§Ä¡)" VARCHAR2(4000 CHAR),
-    "±æÀÌ(Cm)" VARCHAR2(4000 CHAR),
-    "Æø(Cm)" VARCHAR2(4000 CHAR),
-    "ÇÑ°èÁß·®(Kg)" VARCHAR2(4000 CHAR),
-    "½Â°­±â»óÅÂ" VARCHAR2(4000 CHAR)
+    "ì² ë„ìš´ì˜ê¸°ê´€ëª…" VARCHAR2(4000 CHAR),
+    "ìš´ì˜ë…¸ì„ ëª…" VARCHAR2(4000 CHAR),
+    "ì—­ëª…" VARCHAR2(4000 CHAR),
+    "(ê·¼ì ‘)ì¶œìž…êµ¬ë²ˆí˜¸" VARCHAR2(4000 CHAR),
+    "ì‹œìž‘ì¸µ(ì§€ìƒ/ì§€í•˜)" VARCHAR2(4000 CHAR),
+    "ì‹œìž‘ì¸µ(ìš´í–‰ì—­ì¸µ)" VARCHAR2(4000 CHAR),
+    "ì‹œìž‘ì¸µ(ìƒì„¸ìœ„ì¹˜)" VARCHAR2(4000 CHAR),
+    "ì¢…ë£Œì¸µ(ì§€ìƒ/ì§€í•˜)" VARCHAR2(4000 CHAR),
+    "ì¢…ë£Œì¸µ(ìš´í–‰ì—­ì¸µ)" VARCHAR2(4000 CHAR),
+    "ì¢…ë£Œì¸µ(ìƒì„¸ìœ„ì¹˜)" VARCHAR2(4000 CHAR),
+    "ê¸¸ì´(Cm)" VARCHAR2(4000 CHAR),
+    "í­(Cm)" VARCHAR2(4000 CHAR),
+    "í•œê³„ì¤‘ëŸ‰(Kg)" VARCHAR2(4000 CHAR),
+    "ìŠ¹ê°•ê¸°ìƒíƒœ" VARCHAR2(4000 CHAR)
 );
 
--- °ü±¤Áö Å×ÀÌºí »ý¼º
+-- ê´€ê´‘ì§€ í…Œì´ë¸” ìƒì„±
 CREATE TABLE ATTRACTION(
-    "°ü±¤Áö ¹øÈ£" NUMBER
+    "ê´€ê´‘ì§€ ë²ˆí˜¸" NUMBER
         CONSTRAINT ATTR_NO_PK PRIMARY KEY,
-    "Áß½É POI X ÁÂÇ¥" VARCHAR2(4000 CHAR),
-    "Áß½É POI Y ÁÂÇ¥" VARCHAR2(4000 CHAR),
-    "°ü±¤Áö¸í" VARCHAR2(4000 CHAR),
-    "ÁÖ¼Ò" VARCHAR2(4000 CHAR),
-    "Áß½ÉÄ«Å×°í¸® ¸í_´ë" VARCHAR2(4000 CHAR),
-    "ºÐ·ù" VARCHAR2(4000 CHAR),
-    "ÀÚÄ¡±¸º° ¼øÀ§" NUMBER
+    "ì¤‘ì‹¬ POI X ì¢Œí‘œ" VARCHAR2(4000 CHAR),
+    "ì¤‘ì‹¬ POI Y ì¢Œí‘œ" VARCHAR2(4000 CHAR),
+    "ê´€ê´‘ì§€ëª…" VARCHAR2(4000 CHAR),
+    "ì£¼ì†Œ" VARCHAR2(4000 CHAR),
+    "ì¤‘ì‹¬ì¹´í…Œê³ ë¦¬ ëª…_ëŒ€" VARCHAR2(4000 CHAR),
+    "ë¶„ë¥˜" VARCHAR2(4000 CHAR),
+    "ìžì¹˜êµ¬ë³„ ìˆœìœ„" NUMBER
 );
 
--- ¸ÀÁý Å×ÀÌºí »ý¼º
+-- ë§›ì§‘ í…Œì´ë¸” ìƒì„±
 CREATE TABLE RESTAURANT(
-    "À½½ÄÁ¡ ¹øÈ£" NUMBER
+    "ìŒì‹ì  ë²ˆí˜¸" NUMBER
         CONSTRAINT REST_NO_PK PRIMARY KEY,
-    "¾÷¼Ò¸í" VARCHAR2(4000 CHAR),
-    "ÁÖ¼Ò" VARCHAR2(4000 CHAR),
-    "ºÐ·ù" VARCHAR2(4000 CHAR),
-    "ÀÚÄ¡±¸º° ·©Å·" NUMBER
+    "ì—…ì†Œëª…" VARCHAR2(4000 CHAR),
+    "ì£¼ì†Œ" VARCHAR2(4000 CHAR),
+    "ë¶„ë¥˜" VARCHAR2(4000 CHAR),
+    "ìžì¹˜êµ¬ë³„ ëž­í‚¹" NUMBER
 );
 
--- È¥Àâµµ Å×ÀÌºí »ý¼º
+-- í˜¼ìž¡ë„ í…Œì´ë¸” ìƒì„±
 CREATE TABLE CONGESTION(
-    "¿¬¹ø" NUMBER
+    "ì—°ë²ˆ" NUMBER
         CONSTRAINT SERIAL_NO_PK PRIMARY KEY,
-    "¿äÀÏ±¸ºÐ" VARCHAR2(10 CHAR),
-    "È£¼±" VARCHAR2(10 CHAR),
-    "¿ª¹øÈ£" NUMBER,
-    "Ãâ¹ß¿ª" VARCHAR2(30 CHAR),
-    "»óÇÏ±¸ºÐ" VARCHAR2(10 CHAR),
-    "5½Ã30ºÐ" VARCHAR2(10 CHAR),
-    "6½Ã00ºÐ" VARCHAR2(10 CHAR),
-    "6½Ã30ºÐ" VARCHAR2(10 CHAR),
-    "7½Ã00ºÐ" VARCHAR2(10 CHAR),
-    "7½Ã30ºÐ" VARCHAR2(10 CHAR),
-    "8½Ã00ºÐ" VARCHAR2(10 CHAR),
-    "8½Ã30ºÐ" VARCHAR2(10 CHAR),
-    "9½Ã00ºÐ" VARCHAR2(10 CHAR),
-    "9½Ã30ºÐ" VARCHAR2(10 CHAR),
-    "10½Ã00ºÐ" VARCHAR2(10 CHAR),
-    "10½Ã30ºÐ" VARCHAR2(10 CHAR),
-    "11½Ã00ºÐ" VARCHAR2(10 CHAR),
-    "11½Ã30ºÐ" VARCHAR2(10 CHAR),
-    "12½Ã00ºÐ" VARCHAR2(10 CHAR),
-    "12½Ã30ºÐ" VARCHAR2(10 CHAR),
-    "13½Ã00ºÐ" VARCHAR2(10 CHAR),
-    "13½Ã30ºÐ" VARCHAR2(10 CHAR),
-    "14½Ã00ºÐ" VARCHAR2(10 CHAR),
-    "14½Ã30ºÐ" VARCHAR2(10 CHAR),
-    "15½Ã00ºÐ" VARCHAR2(10 CHAR),
-    "15½Ã30ºÐ" VARCHAR2(10 CHAR),
-    "16½Ã00ºÐ" VARCHAR2(10 CHAR),
-    "16½Ã30ºÐ" VARCHAR2(10 CHAR),
-    "17½Ã00ºÐ" VARCHAR2(10 CHAR),
-    "17½Ã30ºÐ" VARCHAR2(10 CHAR),
-    "18½Ã00ºÐ" VARCHAR2(10 CHAR),
-    "18½Ã30ºÐ" VARCHAR2(10 CHAR),
-    "19½Ã00ºÐ" VARCHAR2(10 CHAR),
-    "19½Ã30ºÐ" VARCHAR2(10 CHAR),
-    "20½Ã00ºÐ" VARCHAR2(10 CHAR),
-    "20½Ã30ºÐ" VARCHAR2(10 CHAR),
-    "21½Ã00ºÐ" VARCHAR2(10 CHAR),
-    "21½Ã30ºÐ" VARCHAR2(10 CHAR),
-    "22½Ã00ºÐ" VARCHAR2(10 CHAR),
-    "22½Ã30ºÐ" VARCHAR2(10 CHAR),
-    "23½Ã00ºÐ" VARCHAR2(10 CHAR),
-    "23½Ã30ºÐ" VARCHAR2(10 CHAR),
-    "00½Ã00ºÐ" VARCHAR2(10 CHAR),
-    "00½Ã30ºÐ" VARCHAR2(10 CHAR)
+    "ìš”ì¼êµ¬ë¶„" VARCHAR2(10 CHAR),
+    "í˜¸ì„ " VARCHAR2(10 CHAR),
+    "ì—­ë²ˆí˜¸" NUMBER,
+    "ì¶œë°œì—­" VARCHAR2(30 CHAR),
+    "ìƒí•˜êµ¬ë¶„" VARCHAR2(10 CHAR),
+    "5ì‹œ30ë¶„" VARCHAR2(10 CHAR),
+    "6ì‹œ00ë¶„" VARCHAR2(10 CHAR),
+    "6ì‹œ30ë¶„" VARCHAR2(10 CHAR),
+    "7ì‹œ00ë¶„" VARCHAR2(10 CHAR),
+    "7ì‹œ30ë¶„" VARCHAR2(10 CHAR),
+    "8ì‹œ00ë¶„" VARCHAR2(10 CHAR),
+    "8ì‹œ30ë¶„" VARCHAR2(10 CHAR),
+    "9ì‹œ00ë¶„" VARCHAR2(10 CHAR),
+    "9ì‹œ30ë¶„" VARCHAR2(10 CHAR),
+    "10ì‹œ00ë¶„" VARCHAR2(10 CHAR),
+    "10ì‹œ30ë¶„" VARCHAR2(10 CHAR),
+    "11ì‹œ00ë¶„" VARCHAR2(10 CHAR),
+    "11ì‹œ30ë¶„" VARCHAR2(10 CHAR),
+    "12ì‹œ00ë¶„" VARCHAR2(10 CHAR),
+    "12ì‹œ30ë¶„" VARCHAR2(10 CHAR),
+    "13ì‹œ00ë¶„" VARCHAR2(10 CHAR),
+    "13ì‹œ30ë¶„" VARCHAR2(10 CHAR),
+    "14ì‹œ00ë¶„" VARCHAR2(10 CHAR),
+    "14ì‹œ30ë¶„" VARCHAR2(10 CHAR),
+    "15ì‹œ00ë¶„" VARCHAR2(10 CHAR),
+    "15ì‹œ30ë¶„" VARCHAR2(10 CHAR),
+    "16ì‹œ00ë¶„" VARCHAR2(10 CHAR),
+    "16ì‹œ30ë¶„" VARCHAR2(10 CHAR),
+    "17ì‹œ00ë¶„" VARCHAR2(10 CHAR),
+    "17ì‹œ30ë¶„" VARCHAR2(10 CHAR),
+    "18ì‹œ00ë¶„" VARCHAR2(10 CHAR),
+    "18ì‹œ30ë¶„" VARCHAR2(10 CHAR),
+    "19ì‹œ00ë¶„" VARCHAR2(10 CHAR),
+    "19ì‹œ30ë¶„" VARCHAR2(10 CHAR),
+    "20ì‹œ00ë¶„" VARCHAR2(10 CHAR),
+    "20ì‹œ30ë¶„" VARCHAR2(10 CHAR),
+    "21ì‹œ00ë¶„" VARCHAR2(10 CHAR),
+    "21ì‹œ30ë¶„" VARCHAR2(10 CHAR),
+    "22ì‹œ00ë¶„" VARCHAR2(10 CHAR),
+    "22ì‹œ30ë¶„" VARCHAR2(10 CHAR),
+    "23ì‹œ00ë¶„" VARCHAR2(10 CHAR),
+    "23ì‹œ30ë¶„" VARCHAR2(10 CHAR),
+    "00ì‹œ00ë¶„" VARCHAR2(10 CHAR),
+    "00ì‹œ30ë¶„" VARCHAR2(10 CHAR)
 );
 
--- È¸¿ø°¡ÀÔ °ü·Ã ½ÃÄö½º »ý¼º ÄÚµå
+-- íšŒì›ê°€ìž… ê´€ë ¨ ì‹œí€€ìŠ¤ ìƒì„± ì½”ë“œ
 CREATE Sequence membSeq
 start with 1001
 increment by 1
 nocache
 nocycle;
 
--- ±×¸®°í ÆÄÀÌ½ã¿¡¼­ÀÇ µ¥ÀÌÅÍ´Â UTF-8·Î ÀÎÄÚµùÀÌ µÇ¾îÀÖ´Âµ¥
--- ¿À¶óÅ¬¿¡¼­ SELECTÀýÀ» ÆíÇÏ°Ô ¾²·Á¸é EUC_KR(ÃßÃµ)ÀÌ³ª UTF-8·Î ÀÎÄÚµù ¼³Á¤ÀÌ µÇ¾î¾ß ÇÑ´Ù.
--- µµ±¸(T) -> ¸Ç ¹Ø¿¡ ÀÖ´Â È¯°æ¼³Á¤ Å¬¸¯ -> È¯°æ ¸Þ´ºÀÇ ÀÎÄÚµù ¼³Á¤ EUC_KRÀÌ³ª UTF-8·Î º¯°æ ÈÄ È®ÀÎ.
--- ¾È ±×·¯¸é ÄÃ·³À» Á¶È¸ÇÒ ¶§µµ to_char("ÄÃ·³¸í")À¸·Î ÇüÅÂ¸¦ ÀÛ¼ºÇØ¾ß ÇÑ´Ù.
--- ¹°·Ð Å×ÀÌºíÀ» ¸¸µé°í ³­ µÚ µ¥ÀÌÅÍ¸¦ »ðÀÔÇÏ·Á°í ÇÒ ¶§ UTF-8·Î ÀÎÄÚµùÀÌ µÇ¾îÀÖ´ÂÁö È®ÀÎÇÏ°í »ðÀÔÀ» ÇØ¾ß ÇÑ´Ù.
+-- ê·¸ë¦¬ê³  íŒŒì´ì¬ì—ì„œì˜ ë°ì´í„°ëŠ” UTF-8ë¡œ ì¸ì½”ë”©ì´ ë˜ì–´ìžˆëŠ”ë°
+-- ì˜¤ë¼í´ì—ì„œ SELECTì ˆì„ íŽ¸í•˜ê²Œ ì“°ë ¤ë©´ EUC_KR(ì¶”ì²œ)ì´ë‚˜ UTF-8ë¡œ ì¸ì½”ë”© ì„¤ì •ì´ ë˜ì–´ì•¼ í•œë‹¤.
+-- ë„êµ¬(T) -> ë§¨ ë°‘ì— ìžˆëŠ” í™˜ê²½ì„¤ì • í´ë¦­ -> í™˜ê²½ ë©”ë‰´ì˜ ì¸ì½”ë”© ì„¤ì • EUC_KRì´ë‚˜ UTF-8ë¡œ ë³€ê²½ í›„ í™•ì¸.
+-- ì•ˆ ê·¸ëŸ¬ë©´ ì»¬ëŸ¼ì„ ì¡°íšŒí•  ë•Œë„ to_char("ì»¬ëŸ¼ëª…")ìœ¼ë¡œ í˜•íƒœë¥¼ ìž‘ì„±í•´ì•¼ í•œë‹¤.
+-- ë¬¼ë¡  í…Œì´ë¸”ì„ ë§Œë“¤ê³  ë‚œ ë’¤ ë°ì´í„°ë¥¼ ì‚½ìž…í•˜ë ¤ê³  í•  ë•Œ UTF-8ë¡œ ì¸ì½”ë”©ì´ ë˜ì–´ìžˆëŠ”ì§€ í™•ì¸í•˜ê³  ì‚½ìž…ì„ í•´ì•¼ í•œë‹¤.
 
 commit;
 
--- UTF-8·Î ÀÎÄÚµù µÇ¾îÀÖ´Â »óÅÂ
+-- UTF-8ë¡œ ì¸ì½”ë”© ë˜ì–´ìžˆëŠ” ìƒíƒœ
 SELECT
-    "Ã¶µµ¿î¿µ±â°ü¸í" È¸»ç, "¿î¿µ³ë¼±¸í" ³ë¼±
+    "ì² ë„ìš´ì˜ê¸°ê´€ëª…" íšŒì‚¬, "ìš´ì˜ë…¸ì„ ëª…" ë…¸ì„ 
 FROM
     elevator
 where
-    "Ã¶µµ¿î¿µ±â°ü¸í" = '¼­¿ï±³Åë°ø»ç'
+    "ì² ë„ìš´ì˜ê¸°ê´€ëª…" = 'ì„œìš¸êµí†µê³µì‚¬'
 order by
-    ³ë¼±
+    ë…¸ì„ 
 ;
 
--- ´Ù¸¥ °æ¿ì
+-- ë‹¤ë¥¸ ê²½ìš°
 SELECT
-    to_Char("Ã¶µµ¿î¿µ±â°ü¸í") È¸»ç, to_char("¿î¿µ³ë¼±¸í") ³ë¼±
+    to_Char("ì² ë„ìš´ì˜ê¸°ê´€ëª…") íšŒì‚¬, to_char("ìš´ì˜ë…¸ì„ ëª…") ë…¸ì„ 
 FROM
     elevator
 where
-    to_Char("Ã¶µµ¿î¿µ±â°ü¸í") = '¼­¿ï±³Åë°ø»ç'
+    to_Char("ì² ë„ìš´ì˜ê¸°ê´€ëª…") = 'ì„œìš¸êµí†µê³µì‚¬'
 order by
-    ³ë¼±
+    ë…¸ì„ 
 ;
 
--- °­¼­±¸¿¡ ÀÖ´Â °ü±¤Áö ÀÌ¸§°ú ÁÖ¼Ò ±×¸®°í Ä«Å×°í¸®¸¸ °Ë»ö
+-- ê°•ì„œêµ¬ì— ìžˆëŠ” ê´€ê´‘ì§€ ì´ë¦„ê³¼ ì£¼ì†Œ ê·¸ë¦¬ê³  ì¹´í…Œê³ ë¦¬ë§Œ ê²€ìƒ‰
 SELECT
-    "°ü±¤Áö¸í" °ü±¤Áö¸í,"ÁÖ¼Ò" ÁÖ¼Ò, "Áß½ÉÄ«Å×°í¸® ¸í_´ë" Ä«Å×°í¸®
+    "ê´€ê´‘ì§€ëª…" ê´€ê´‘ì§€ëª…,"ì£¼ì†Œ" ì£¼ì†Œ, "ì¤‘ì‹¬ì¹´í…Œê³ ë¦¬ ëª…_ëŒ€" ì¹´í…Œê³ ë¦¬
 FROM
     attraction
 WHERE
-    ÁÖ¼Ò LIKE '%¾çÃµ±¸%'
+    ì£¼ì†Œ LIKE '%ì–‘ì²œêµ¬%'
 ;
-
