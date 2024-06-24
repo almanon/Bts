@@ -36,12 +36,12 @@
 		<beans:property name="maxInMemorySize" value="50000000" />
 		<beans:property name="defaultEncoding" value="UTF-8" />
 	</beans:bean>
-	 <!--  
-	<beans:bean id="colorList" class="com.human.bts.util.ColorList" />-->
 	
-	<!--  빈처리 설정파일 가져오기
+	<beans:bean id="colorList" class="com.human.bts.util.ColorList" />
+	
+	
 	<beans:import resource="daoContext.xml"/>
-	<beans:import resource="interceptor-context.xml"/>
+	<!--<beans:import resource="interceptor-context.xml"/>
 	<beans:import resource="scheduler-context.xml"/>--> 
 	
 	<context:component-scan base-package="com.human.bts" />

@@ -80,7 +80,30 @@
 			$('#join').click(function(){
 				$(location).attr('href', '/bts/join.bts');
 			});
+			
+			
+			$('#login').click(function(){
+				
+				var sid = $('#id').val();
+				if(!sid) {
+					$('#id').focus();
+					return;
+				}
+				var spw = $('#pw').val();
+				if(!spw){
+					$('#pw').focus();
+					return;
+				}
+				
+				$('#frm').submit();
+			});
+			
+			$('#logout').click(function(){
+				$(location).attr('href', '/bts/logout.bts');
+			});
 		});
+		
+		
 	</script>
 	
 	
@@ -134,34 +157,37 @@
 								  
 
 								   <!-- Tab panes -->
+									<form method="GET" action="/bts/loginProc.bts" name="frm" id="frm">
 									<div>
 									 <div>
-										<div class="col-xxs-12 col-xs-12 mt">
+										<div class="col-xxs-12 col-xs-12 mt" >
 										<br>
 										<br>
+									
 												<div class="input-field">
-													<label for="from">City:</label>
-													<input type="text" class="form-control" id="from-place" placeholder="Los Angeles, USA"/>
-												</div>
+													<label for="id">아이디:</label>
+													<input type="text" class="form-control" name="id" id="id" placeholder="아이디를 입력하세요"/>
+												</div> 
 											</div>
 											
 										<div class="col-xxs-12 col-xs-12 mt">
 												<div class="input-field">
-													<label for="from">City:</label>
-													<input type="text" class="form-control" id="from-place" placeholder="Los Angeles, USA"/>
+													<label for="pw">비밀번호:</label>
+													<input type="text" class="form-control" name="pw" id="pw" placeholder="비밀번호를 입력하세요"/>
 												</div>
 											</div>
 											
 										
-											<div class="col-xs-12"style="margin-bottom:15px;">
-												<input type="submit" class="btn btn-primary btn-block" value="로그인">
+											<div  class="col-xs-12"style="margin-bottom:15px;">
+												<input type="button" class="btn btn-primary btn-block" value="로그인" id="login">
 											</div>
 										
-											<div id="join" class="col-xs-12" style="margin-bottom:15px;">
-												<input type="submit" class="btn btn-primary btn-block" value="회원가입">
+											<div  class="col-xs-12" style="margin-bottom:15px;">
+												<input type="button" class="btn btn-primary btn-block" value="회원가입" id="join">
 											</div>
 										</div>
 									 </div>
+									 </form>
 									</div>
 									
 									
@@ -184,17 +210,16 @@
     <hr class="w3-border-black" style="margin:auto;width:40%">
     <p class="w3-large w3-center">35 days left</p>
     <div class="col-xs-12"style="margin-bottom:15px;">
-												<input type="submit" class="btn btn-primary btn-block" value="길찾기">
 											</div>
 										
 											<div class="col-xs-12" style="margin-bottom:50px;">
-												<input type="submit" class="btn btn-primary btn-block" value="코스 추천">
+												<input type="button" class="btn btn-primary btn-block" value="코스 추천">
 											</div>
 											<div class="col-xs-6" style="margin-bottom:15px;">
-												<input type="submit" class="btn btn-primary btn-block w3-small" value="정보수정">
+												<input type="button" class="btn btn-primary btn-block w3-small" value="정보수정">
 											</div>
 											<div class="col-xs-6" style="margin-bottom:15px;">
-												<input type="submit" class="btn btn-primary btn-block w3-small" value="로그아웃">
+												<input name="logout" id="logout" type="button" class="btn btn-primary btn-block w3-small" value="로그아웃">
 											</div>
   </div>
  

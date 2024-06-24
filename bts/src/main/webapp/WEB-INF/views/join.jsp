@@ -81,6 +81,20 @@
 			$('#main').click(function(){
 				$(location).attr('href', '/bts/main.bts');
 			});
+			
+			
+			$('#join').click(function(){
+				var sname = $('#name').val();
+				var sid = $('#id').val();
+				var spw = $('#pw').val();
+				var smail = $('#mail').val();
+				
+				if(!sname || !sid || !spw || !smail){
+					return;
+				}
+				
+				$('#frm').submit();
+			});
 		});
 	</script>
 	
@@ -140,52 +154,45 @@
 								   </ul>
 
 								   <!-- Tab panes -->
+								   <form method="GET" action="/bts/joinProc.bts" name="frm" id="frm">
 									<div class="tab-content">
 									 <div role="tabpanel" class="tab-pane active" id="flights">
 										<div class="row">
 											<div class="col-xxs-12 col-xs-12 mt">
 												<div class="input-field">
-													<label for="from">From:</label>
-													<input type="text" class="form-control" id="from-place" placeholder="Los Angeles, USA"/>
+													<label for="name">사용자 이름:</label>
+													<input type="text" name="name" class="form-control" id="name" placeholder="Los Angeles, USA"/>
 												</div>
 											</div>
 											<div class="col-xxs-12 col-xs-12 mt">
 												<div class="input-field">
-													<label for="from">From:</label>
-													<input type="text" class="form-control" id="from-place" placeholder="Los Angeles, USA"/>
+													<label for="id">아이디:</label>
+													<input type="text" name="id" class="form-control" id="id" placeholder="Los Angeles, USA"/>
 												</div>
 											</div>
 											<div class="col-xxs-12 col-xs-12 mt">
 												<div class="input-field">
-													<label for="from">From:</label>
-													<input type="text" class="form-control" id="from-place" placeholder="Los Angeles, USA"/>
+													<label for="pw">비밀번호:</label>
+													<input type="text" name="pw" class="form-control" id="pw" placeholder="Los Angeles, USA"/>
 												</div>
 											</div>
-											<div class="col-xxs-12 col-xs-12 mt">
-												<div class="input-field">
-													<label for="from">From:</label>
-													<input type="text" class="form-control" id="from-place" placeholder="Los Angeles, USA"/>
-												</div>
-											</div>
-											<div class="col-xxs-12 col-xs-12 mt">
-												<div class="input-field">
-													<label for="from">From:</label>
-													<input type="text" class="form-control" id="from-place" placeholder="Los Angeles, USA"/>
-												</div>
-											</div>
-											
-											<div id="main" class="col-xs-6">
-												<input type="submit" class="btn btn-primary btn-block" value="Search Flight">
-											</div>
+										
+										
 											<div class="col-xs-6">
-												<input type="submit" class="btn btn-primary btn-block" value="Search Flight">
+												<input type="button" class="btn btn-primary btn-block" value="메인으로" id="main" >
+											</div>
+											<div  class="col-xs-6">
+												<input type="button" class="btn btn-primary btn-block" value="회원가입" id="join">
 											</div>
 											
 										</div>
+										
 							</div>
 
 										</div>
+										 </form>
 									 </div>
+									
 									</div>
 									 </div>
 									

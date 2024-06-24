@@ -272,7 +272,7 @@
 													<input type="text" class="form-control" id="to-place" placeholder="Tokyo, Japan"/>
 												</div>
 											</div>
-											<div class="col-xxs-12 col-xs-6 mt alternate">
+											<div class="col-xxs-12 col-xs-12 mt alternate">
 												<div class="input-field">
 													<label for="date-start">Departs:</label>
 													<input type="text" class="form-control" id="date-start" placeholder="mm/dd/yyyy"/>
