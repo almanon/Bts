@@ -67,7 +67,6 @@ public class MainController {
 			rv.setUrl("/bts/main.bts");
 		}else {
 			rv.setUrl("/bts/join.bts");
-			
 		}
 		
 		mv.setView(rv);

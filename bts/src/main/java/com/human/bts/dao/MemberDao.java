@@ -15,6 +15,6 @@ public class MemberDao {
 	
 	
 	public int addMemb(MemberVO mVO) {
-		return session.insert("mSQL.addMemb", mVO);
+		return session.insert("mSQL.addMember", mVO);
 	}
 }
