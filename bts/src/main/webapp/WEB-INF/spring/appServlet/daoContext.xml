@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+						https://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="mDao" class="com.human.bts.dao.MemberDao" />
+	<!-- 
+	<bean id="fileUtil" class="com.human.son.util.FileUtil" />
+	<bean id="page" class="com.human.son.util.PageUtil" />
+	
+	<bean id="gDao" class="com.human.son.dao.GboardDao" />
+	<bean id="fDao" class="com.human.son.dao.FileBoardDao" />
+	<bean id="sDao" class="com.human.son.dao.SurveyDao" />
+	<bean id="eDao" class="com.human.son.dao.EmpDao" />
+	
+	<bean id="fileService" class="com.human.son.service.FileBoardService" />
+	<bean id="surveyService" class="com.human.son.service.SurveyService" />
+	 -->
+</beans>
