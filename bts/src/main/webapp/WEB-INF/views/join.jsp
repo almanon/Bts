@@ -87,9 +87,8 @@
 				var sname = $('#name').val();
 				var sid = $('#id').val();
 				var spw = $('#pw').val();
-				var smail = $('#mail').val();
 				
-				if(!sname || !sid || !spw || !smail){
+				if(!sname || !sid || !spw){
 					return;
 				}
 				
