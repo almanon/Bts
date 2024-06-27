@@ -117,11 +117,11 @@
 					<nav id="fh5co-menu-wrap" role="navigation">
 						<ul class="sf-menu" id="fh5co-primary-menu">
 							<li class="active"><a href="index.html">Home</a></li>						
-							<li><a href="flight.html">Flights</a></li>
-							<li><a href="hotel.html">Hotel</a></li>
-							<li><a href="car.html">Car</a></li>
-							<li><a href="blog.html">Blog</a></li>
-							<li><a href="contact.html">Contact</a></li>
+							<li><a href="flight.html">혼잡도</a></li>
+							<li><a href="hotel.html">서울지도</a></li>
+							<li><a href="car.html">길찾기</a></li>
+							<li><a href="blog.html">코스추천</a></li>
+							<li><a href="contact.html">축제지도</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -129,7 +129,7 @@
 		</header>
 <!-- end:header-top -->
 	
-			<div class="fh5co-cover" style="background-image: url(/bts/images/image15.jpg);">
+			<div class="fh5co-cover" style="background-image: url(/bts/images/image6.jpg);">
 				<div class="desc" >
 					<div class="container">
 <c:if test="${empty SID}">
@@ -174,8 +174,8 @@
 							<div class="desc2 animate-box">
 								<div class="col-sm-7 col-sm-push-1 col-sm-7 col-sm-push-1 w3-right">
 									<h2 style="color:black;">쾌적한 서울대중교통!</h2>
-									<h2 style="color:black;">B us</h2>
-									<h2 style="color:black;">T rain</h2>
+									<h2 style="color:black;">B est</h2>
+									<h2 style="color:black;">T raffic</h2>
 									<h2 style="color:black;">S eoul</h2>
 								</div>
 							</div>
@@ -183,9 +183,9 @@
 </c:if>
 <c:if test="${not empty SID}">
 <div class="w3-display-middle w3-center w3-marigin-top">
-    <h3 class="w3-animate-top">사용자님 환영합니다.</h3>
+    <h3 class="w3-animate-top" style="color:black;">BTS에 온것을 환영합니다.</h3>
     <hr class="w3-border-black" style="margin:auto;width:40%">
-    <p class="w3-large w3-center">35 days left</p>
+    <p class="w3-large w3-center"></p>
     <div class="col-xs-12"style="margin-bottom:15px;">
 											</div>
 											<div class="col-xs-12" style="margin-bottom:50px;">
@@ -227,8 +227,8 @@
 								<i class="icon-hotairballoon"></i>
 							</span>
 							<div class="feature-copy">
-								<h3>Family Travel</h3>
-								<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit.</p>
+								<h3>서울지도</h3>
+								<p></p>
 							</div>
 						</div>
 
@@ -240,8 +240,8 @@
 								<i class="icon-search"></i>
 							</span>
 							<div class="feature-copy">
-								<h3>Travel Plans</h3>
-								<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit.</p>
+								<h3>여행 계획</h3>
+								<p>BTS만의 코스추천을 이용해 보다 즐거운 서울여행을 해보세요</p>
 							</div>
 						</div>
 					</div>
@@ -251,8 +251,8 @@
 								<i class="icon-wallet"></i>
 							</span>
 							<div class="feature-copy">
-								<h3>Honeymoon</h3>
-								<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit.</p>
+								<h3>실시간 안내</h3>
+								<p>실시간 제공되는 대중교통 시간표를 통해 시간을 절약해보세요</p>
 							</div>
 						</div>
 					</div>
@@ -265,8 +265,8 @@
 								<i class="icon-wine"></i>
 							</span>
 							<div class="feature-copy">
-								<h3>Business Travel</h3>
-								<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit.</p>
+								<h3>편안한 여정</h3>
+								<p>실시간으로 BTS만의 혼잡도 데이터를 이용해 보다 쾌적한 서울 대중교통을 이용하세요</p>
 							</div>
 						</div>
 
@@ -278,8 +278,8 @@
 								<i class="icon-genius"></i>
 							</span>
 							<div class="feature-copy">
-								<h3>Solo Travel</h3>
-								<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit.</p>
+								<h3>스마트한 서울 문화생활</h3>
+								<p></p>
 							</div>
 						</div>
 
@@ -290,8 +290,8 @@
 								<i class="icon-chat"></i>
 							</span>
 							<div class="feature-copy">
-								<h3>Explorer</h3>
-								<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit.</p>
+								<h3></h3>
+								<p></p>
 							</div>
 						</div>
 					</div>
