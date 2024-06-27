@@ -1,0 +1,47 @@
+#bts project 요청설계
+
+# main page 요청설계
+요청내용 	:	/bts/main.bts , /
+파라미터	:	없음
+컨트롤러	:	com.human.bts.controller.MainController	- /main.son
+				com.human.home.BtsMain					- /
+처리함수	:	getMain()
+응답문서	:	/WEB-INF/views/main.jsp
+-----------------------------------------------------------------------------
+# 회원관련 요청 설계
+
+# 로그인 처리 요청
+요청내용 	:	/bts/loginProc. bts
+파라미터	:	id, pw
+컨트롤러	:	com.human.bts.controller.MainController
+처리함수	:	loginProc()
+응답문서	:	
+				redirect ]
+					성공 :	/bts/main.bts
+					실패 :	/bts/main.bts
+					
+# 로그아웃 처리 요청
+요청내용 	:	/bts/logout.bts
+파라미터	:	none
+컨트롤러	:	com.human.bts.controller.MainController
+처리함수	:	logout()
+응답문서	:	
+				redirect ]
+					성공/실패 :	/main.son
+
+# 회원가입 폼보기 요청
+요청내용 	:	/bts/join.bts
+파라미터	:	none
+컨트롤러	:	com.human.bts.controller.MainController
+처리함수	:	join()
+응답문서	:	/WEB-INF/views/join.jsp
+
+# 회원가입 처리 요청
+요청내용 	:	/bts/joinProc.bts
+파라미터	:	name, id, pw, 
+컨트롤러	:	com.human.bts.controller.MainController
+처리함수	:	joinProc()
+응답문서	:	
+				redirect ]
+					성공 :	/bts/main.bts
+					실패 :	/bts/join.bts
