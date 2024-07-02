@@ -9,7 +9,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Travel &mdash; 100% Free Fully Responsive HTML5 Template by FREEHTML5.co</title>
+	<title>BTS &mdash; Best Tour Seoul! 서울여행ㅇ</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
 	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
@@ -115,7 +115,7 @@
 						<li><a href="flight.html">혼잡도</a></li>
 							<li><a href="hotel.html">서울지도</a></li>
 							<li><a href="car.html">길찾기</a></li>
-							<li><a href="blog.html">코스추천</a></li>
+							<li><a href="blog.html">테마지도</a></li>
 							<li><a href="contact.html">축제지도</a></li>
 						</ul>
 					</nav>
@@ -184,13 +184,9 @@
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-	
-	</div>
+			
 	<!-- END fh5co-page -->
 
-	</div>
 	<!-- END fh5co-wrapper -->
 
 	<!-- jQuery -->

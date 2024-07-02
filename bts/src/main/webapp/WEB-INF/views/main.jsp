@@ -8,7 +8,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Travel &mdash; 100% Free Fully Responsive HTML5 Template by FREEHTML5.co</title>
+	<title>BTS &mdash; Best Tour Seoul!</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
 	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
@@ -67,8 +67,8 @@
 
 	<script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
 	<style type="text/css">
-
 	</style>
+	
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
 	<!-- FOR IE9 below -->
@@ -113,6 +113,7 @@
 				<div class="nav-header">
 					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"><i></i></a>
 					<h1 id="fh5co-logo"><a href="index.html"><i class="icon-airplane"></i>BTS</a></h1>
+					
 <!-- START #fh5co-menu-wrap -->
 					<nav id="fh5co-menu-wrap" role="navigation">
 						<ul class="sf-menu" id="fh5co-primary-menu">
@@ -120,7 +121,7 @@
 							<li><a href="flight.html">혼잡도</a></li>
 							<li><a href="hotel.html">서울지도</a></li>
 							<li><a href="car.html">길찾기</a></li>
-							<li><a href="blog.html">코스추천</a></li>
+							<li><a href="blog.html">테마지도</a></li>
 							<li><a href="contact.html">축제지도</a></li>
 						</ul>
 					</nav>
@@ -175,7 +176,7 @@
 								<div class="col-sm-7 col-sm-push-1 col-sm-7 col-sm-push-1 w3-right">
 									<h2 style="color:black;">쾌적한 서울대중교통!</h2>
 									<h2 style="color:black;">B est</h2>
-									<h2 style="color:black;">T raffic</h2>
+									<h2 style="color:black;">T our</h2>
 									<h2 style="color:black;">S eoul</h2>
 								</div>
 							</div>
@@ -204,7 +205,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		
 		
 		<div id="fh5co-tours" class="fh5co-section-gray">
 			<div class="container">
@@ -227,8 +228,8 @@
 								<i class="icon-hotairballoon"></i>
 							</span>
 							<div class="feature-copy">
-								<h3>서울지도</h3>
-								<p></p>
+								<h3>지도 제공</h3>
+								<p>BTS는 정확한 서울지도를 제공함으로써 서울여행에 도움을 줍니다.</p>
 							</div>
 						</div>
 
@@ -241,7 +242,7 @@
 							</span>
 							<div class="feature-copy">
 								<h3>여행 계획</h3>
-								<p>BTS만의 코스추천을 이용해 보다 즐거운 서울여행을 해보세요</p>
+								<p>BTS만의 테마지도를 이용해 보다 즐거운 서울여행을 해보세요</p>
 							</div>
 						</div>
 					</div>
@@ -279,7 +280,7 @@
 							</span>
 							<div class="feature-copy">
 								<h3>스마트한 서울 문화생활</h3>
-								<p></p>
+								<p>BTS의 테마지도는 최신화된 서울문화생활 컨텐츠를 제공합니다.</p>
 							</div>
 						</div>
 
@@ -290,8 +291,8 @@
 								<i class="icon-chat"></i>
 							</span>
 							<div class="feature-copy">
-								<h3></h3>
-								<p></p>
+								<h3>주기적인 업데이트</h3>
+								<p>정확한 정보제공을 위해 서울의 주요행사일정을 주기적으로 업데이트하여 제공합니다.</p>
 							</div>
 						</div>
 					</div>
