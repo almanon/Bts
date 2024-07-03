@@ -9,7 +9,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>BTS &mdash; Best Tour Seoul! 서울여행ㅇ</title>
+	<title>BTS &mdash; Best Tour Seoul!</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
 	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
@@ -116,7 +116,6 @@
 							<li><a href="hotel.html">서울지도</a></li>
 							<li><a href="car.html">길찾기</a></li>
 							<li><a href="blog.html">테마지도</a></li>
-							<li><a href="contact.html">축제지도</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -126,8 +125,7 @@
 		<!-- end:header-top -->
 	
 		<div class="fh5co-hero">
-			<div class="fh5co-overlay"></div>
-			<div class="fh5co-cover" data-stellar-background-ratio="0.5" style="background-image: url(images/cover_bg_1.jpg);">
+			<div class="fh5co-cover" style="background-image: url(/bts/images/img16.jpg);">
 				<div class="desc">
 					<div class="container">
 							<div >
@@ -149,19 +147,19 @@
 											<div class="col-xxs-12 col-xs-12 mt">
 												<div class="input-field">
 													<label for="name">사용자 이름:</label>
-													<input type="text" name="name" class="form-control" id="name" placeholder=""/>
+													<input type="text" name="name" class="form-control" id="name" >
 												</div>
 											</div>
 											<div class="col-xxs-12 col-xs-12 mt">
 												<div class="input-field">
 													<label for="id">아이디:</label>
-													<input type="text" name="id" class="form-control" id="id" placeholder=""/>
+													<input type="text" name="id" class="form-control" id="id" >
 												</div>
 											</div>
 											<div class="col-xxs-12 col-xs-12 mt">
 												<div class="input-field">
 													<label for="pw">비밀번호:</label>
-													<input type="text" name="pw" class="form-control" id="pw" placeholder=""/>
+													<input type="text" name="pw" class="form-control" id="pw" >
 												</div>
 											</div>
 										

@@ -122,7 +122,6 @@
 							<li><a href="hotel.html">서울지도</a></li>
 							<li><a href="car.html">길찾기</a></li>
 							<li><a href="blog.html">테마지도</a></li>
-							<li><a href="contact.html">축제지도</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -130,14 +129,12 @@
 		</header>
 <!-- end:header-top -->
 	
-			<div class="fh5co-cover" style="background-image: url(/bts/images/image6.jpg);">
+			<div class="fh5co-cover" style="background-image: url(/bts/images/img17.jpg);">
 				<div class="desc" >
 					<div class="container">
 <c:if test="${empty SID}">
 							<div class="col-sm-5 col-md-5">
 								<div class="animate-box">
-
-								  <!-- Nav tabs -->
 								  
 								   <!-- Tab panes -->
 									<form method="GET" action="/bts/loginProc.bts" name="frm" id="frm">
@@ -174,23 +171,23 @@
 								</div>
 							<div class="desc2 animate-box">
 								<div class="col-sm-7 col-sm-push-1 col-sm-7 col-sm-push-1 w3-right">
-									<h2 style="color:black;">쾌적한 서울대중교통!</h2>
-									<h2 style="color:black;">B est</h2>
-									<h2 style="color:black;">T our</h2>
-									<h2 style="color:black;">S eoul</h2>
+									<h2>쾌적한 서울여행!</h2>
+									<h2>B est</h2>
+									<h2>T our</h2>
+									<h2>S eoul</h2>
 								</div>
 							</div>
 							
 </c:if>
 <c:if test="${not empty SID}">
 <div class="w3-display-middle w3-center w3-marigin-top">
-    <h3 class="w3-animate-top" style="color:black;">BTS에 온것을 환영합니다.</h3>
-    <hr class="w3-border-black" style="margin:auto;width:40%">
+    <h3 class="w3-animate-top" style="color:white;">BTS와 함께 서울을 즐겨보세요!</h3>
+    <hr class="w3-border-white" style="margin:auto;width:40%">
     <p class="w3-large w3-center"></p>
     <div class="col-xs-12"style="margin-bottom:15px;">
 											</div>
 											<div class="col-xs-12" style="margin-bottom:50px;">
-												<input type="button" class="btn btn-primary btn-block" value="코스 추천">
+												<input type="button" class="btn btn-primary btn-block" value="길찾기">
 											</div>
 											<div class="col-xs-6" style="margin-bottom:15px;">
 												<input type="button" class="btn btn-primary btn-block w3-small" value="정보수정">
@@ -242,7 +239,7 @@
 							</span>
 							<div class="feature-copy">
 								<h3>여행 계획</h3>
-								<p>BTS만의 테마지도를 이용해 보다 즐거운 서울여행을 해보세요</p>
+								<p>BTS만의 테마지도를 이용해 보다 즐거운 여행계획을 작성해보세요</p>
 							</div>
 						</div>
 					</div>
@@ -253,7 +250,7 @@
 							</span>
 							<div class="feature-copy">
 								<h3>실시간 안내</h3>
-								<p>실시간 제공되는 대중교통 시간표를 통해 시간을 절약해보세요</p>
+								<p>실시간 제공되는 대중교통 시간표를 통해 여행시간을 절약해보세요</p>
 							</div>
 						</div>
 					</div>
@@ -267,7 +264,7 @@
 							</span>
 							<div class="feature-copy">
 								<h3>편안한 여정</h3>
-								<p>실시간으로 BTS만의 혼잡도 데이터를 이용해 보다 쾌적한 서울 대중교통을 이용하세요</p>
+								<p>실시간으로 BTS만의 혼잡도 데이터를 통해 쾌적한 서울 대중교통을 이용하세</p>
 							</div>
 						</div>
 
@@ -280,7 +277,7 @@
 							</span>
 							<div class="feature-copy">
 								<h3>스마트한 서울 문화생활</h3>
-								<p>BTS의 테마지도는 최신화된 서울문화생활 컨텐츠를 제공합니다.</p>
+								<p>BTS의 테마지도는 최신화된 서울시의 문화컨텐츠를 제공합니다.</p>
 							</div>
 						</div>
 
