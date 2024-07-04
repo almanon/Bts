@@ -112,7 +112,7 @@
 			<div class="container">
 				<div class="nav-header">
 					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"><i></i></a>
-					<h1 id="fh5co-logo"><a href="index.html"><i class="icon-airplane"></i>BTS</a></h1>
+					<h1 id="fh5co-logo"><a href="index.html"><i class="icon-aircraft-take-off"></i>BTS</a></h1>
 					
 <!-- START #fh5co-menu-wrap -->
 					<nav id="fh5co-menu-wrap" role="navigation">
@@ -222,7 +222,7 @@
 
 						<div class="feature-left">
 							<span class="icon">
-								<i class="icon-hotairballoon"></i>
+								<i class="icon-map"></i>
 							</span>
 							<div class="feature-copy">
 								<h3>지도 제공</h3>
@@ -235,7 +235,7 @@
 					<div class="col-md-4 animate-box">
 						<div class="feature-left">
 							<span class="icon">
-								<i class="icon-search"></i>
+								<i class="icon-search2"></i>
 							</span>
 							<div class="feature-copy">
 								<h3>여행 계획</h3>
@@ -246,7 +246,7 @@
 					<div class="col-md-4 animate-box">
 						<div class="feature-left">
 							<span class="icon">
-								<i class="icon-wallet"></i>
+								<i class="icon-megaphone"></i>
 							</span>
 							<div class="feature-copy">
 								<h3>실시간 안내</h3>
@@ -273,7 +273,7 @@
 					<div class="col-md-4 animate-box">
 						<div class="feature-left">
 							<span class="icon">
-								<i class="icon-genius"></i>
+								<i class="icon-expand"></i>
 							</span>
 							<div class="feature-copy">
 								<h3>스마트한 서울 문화생활</h3>
@@ -285,7 +285,7 @@
 					<div class="col-md-4 animate-box">
 						<div class="feature-left">
 							<span class="icon">
-								<i class="icon-chat"></i>
+								<i class="icon-upload2"></i>
 							</span>
 							<div class="feature-copy">
 								<h3>주기적인 업데이트</h3>
