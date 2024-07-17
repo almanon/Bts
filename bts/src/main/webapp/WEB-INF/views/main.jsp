@@ -92,6 +92,8 @@
 			$('#logout').click(function(){
 				$(location).attr('href', '/bts/logout.bts');
 			});
+			
+			
 		});
 	</script>
 	
@@ -104,19 +106,29 @@
 				<div class="nav-header">
 					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"><i></i></a>
 					<h1 id="fh5co-logo"><a href="index.html"><i class="fa fa-bus"></i>BTS</a></h1>
-					
+<c:if test="${not empty SID}">				
 <!-- START #fh5co-menu-wrap -->
 					<nav id="fh5co-menu-wrap" role="navigation">
 						<ul class="sf-menu" id="fh5co-primary-menu">
-							<li class="active"><a href="index.html">Home</a></li>
+							<li class="active" ><a href="/bts/logout.bts">logout</a></li>
 						</ul>
 					</nav>
+</c:if>
+<c:if test="${empty SID}">	
+<!-- START #fh5co-menu-wrap -->
+			
+					<nav id="fh5co-menu-wrap" role="navigation">
+						<ul class="sf-menu" id="fh5co-primary-menu">
+							<li class="active" ><a href="#fh5co-section-gray">about</a></li>
+						</ul>
+					</nav>
+</c:if>
 				</div>
 			</div>
 		</header>
 <!-- end:header-top -->
 	
-			<div class="fh5co-cover" style="background-image: url(/bts/images/mainview2.jpg);">
+			<div class="fh5co-cover" style="background-image: url(/bts/images/img17.jpg);">
 				<div class="desc" >
 					<div class="container">
 <c:if test="${empty SID}">
@@ -158,30 +170,28 @@
 								</div>
 							<div class="desc2 animate-box">
 								<div class="col-sm-7 col-sm-push-1 col-sm-7 col-sm-push-1 w3-right">
-									<h2 style="color:rgb(51, 102, 255, 0.7)"><b>쾌적한 서울여행!</b></h2>
-									<h2 style="color:rgb(51, 105, 105)"><b>B</b> est</h2>
-									<h2 style="color:rgb(105, 105, 105)"><b>T</b> raffic</h2>
-									<h2 style="color:rgb(105, 105, 105)"><b>S</b> eoul</h2>
+									<h2 style="color:#F28444"><b>쾌적한 서울여행!</b></h2>
+									<h2 style="color:white"><b style="color:#F28444">B</b> est</h2>
+									<h2 style="color:white"><b style="color:#F28444">T</b> raffic</h2>
+									<h2 style="color:white"><b style="color:#F28444">S</b> eoul</h2>
 								</div>
 							</div>
 							
 </c:if>
 <c:if test="${not empty SID}">
-<div class="w3-display-middle w3-center w3-marigin-top">
-    <h3 class="w3-animate-top" style="color:white;"><b>BTS와 함께 서울을 탐험해보세요!</b></h3>
+<div class="w3-display-middle w3-center" style="margin-top:100px;">
+    <h3 class="w3-animate-top" style="color:white;"><b>BTS와 함께 국민 스포츠를 즐겨보세요!</b></h3>
     <hr class="w3-border-white" style="margin:auto;width:40%">
     <p class="w3-large w3-center"></p>
     <div class="col-xs-12"style="margin-bottom:15px;">
 											</div>
-											<div class="col-xs-12" style="margin-bottom:50px;">
+											<div class="col-xs-12" style="margin-bottom:15px;">
 												<input type="button" class="btn btn-primary btn-block" value="길찾기">
 											</div>
-											<div class="col-xs-6" style="margin-bottom:15px;">
-												<input type="button" class="btn btn-primary btn-block w3-small" value="정보수정">
+											<div class="col-xs-12" style="margin-bottom:50px;">
+												<input type="button" class="btn btn-primary btn-block" value="상암월드컵경기장 일정 보러가기">
 											</div>
-											<div class="col-xs-6" style="margin-bottom:15px;">
-												<input name="logout" id="logout" type="button" class="btn btn-primary btn-block w3-small" value="로그아웃">
-											</div>
+											
   </div>
 </c:if>
 							</div>
@@ -192,15 +202,16 @@
 		
 		
 		<div id="fh5co-tours" class="fh5co-section-gray">
-			<div class="container">
-				<div class="row">
 					<div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
-						<h3>BTS</h3>
-						<p>BTS는 여러분이 쾌적한 환경에서 서울시 대중교통을 이용할 수 있도록 종합적인 정보를 제공합니다. 
-						출발지부터 도착지까지 최적의 경로를 제시하며, 주요지점 교통 혼잡도를 실시간으로 알려줍니다. 쾌적한 여정을 위해 준비된 BTS을 이용해 보세요</p>
+						<h3>BTS</h3><br><br>
+						<p>국민 스포츠 경기장 정보에 특화된 BTS와 함꼐 쾌적하고 편리한 스포츠 관람을 즐겨보세요!<br><br>
+						
+						   BTS는 여러분이 쾌적한 환경에서 서울시 대중교통을 이용할 수 있도록 종합적인 정보를 제공합니다.
+						   출발지부터 도착지까지 최적의 경로를 제시하며, 주요지점 교통 혼잡도를 실시간으로 알려줍니다.
+						</p>
 					</div>
 				</div>
-
+		</div>
 
 		<div id="fh5co-features">
 			<div class="container">
@@ -226,7 +237,7 @@
 							</span>
 							<div class="feature-copy">
 								<h3>주요지점 혼잡도</h3>
-								<p>BTS만의 테마지도를 이용해 보다 즐거운 여행계획을 작성해보세요</p>
+								<p>스포츠 행사 일정에 따른 주요 경기장의 대중교통 혼잡도를 제공합니다. </p>
 							</div>
 						</div>
 					</div>
@@ -236,8 +247,8 @@
 								<i class="icon-megaphone"></i>
 							</span>
 							<div class="feature-copy">
-								<h3>실시간 안내</h3>
-								<p>실시간 제공되는 대중교통 시간표를 통해 시간을 절약해보세요</p>
+								<h3>최신정보 포함</h3>
+								<p>실시간 교통정보 업데이트를 통해 시간을 절약해보세요</p>
 							</div>
 						</div>
 					</div>
@@ -245,45 +256,13 @@
 				<div class="row">
 					<div class="col-md-4 animate-box">
 
-						<div class="feature-left">
-							<span class="icon">
-								<i class="fa fa-bed"></i>
-							</span>
-							<div class="feature-copy">
-								<h3>편안한 여정</h3>
-								<p>실시간으로 BTS만의 혼잡도 데이터를 통해 쾌적한 서울 대중교통을 이용하세요</p>
-							</div>
-						</div>
-
-					</div>
-
-					<div class="col-md-4 animate-box">
-						<div class="feature-left">
-							<span class="icon">
-								<i class="icon-map22"></i>
-							</span>
-							<div class="feature-copy">
-								<h3>스마트한 서울 문화생활</h3>
-								<p>BTS의 테마지도는 최신화된 서울시의 문화컨텐츠를 제공합니다.</p>
-							</div>
-						</div>
-
-					</div>
-					<div class="col-md-4 animate-box">
-						<div class="feature-left">
-							<span class="icon">
-								<i class="icon-upload2"></i>
-							</span>
-							<div class="feature-copy">
-								<h3>주기적인 업데이트</h3>
-								<p>서울시의 주요행사일정을 토대로 BTS만의 데이터분석을 통해 정보를 제공합니다.</p>
-							</div>
+					
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
+
 	<!-- END fh5co-page -->
 
 	</div>

@@ -348,6 +348,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
+					<!-- 선택메뉴 가져오기-->
 						<h3>Hot Tours</h3>
 						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
 					</div>
@@ -486,6 +487,7 @@
 			<div class="tour-fluid">
 				<div class="row">
 					<div class="col-md-12">
+					<!-- 행사선택 리스트 -->
 						<ul id="fh5co-destination-list" class="animate-box">
 							<li class="one-forth text-center" style="background-image: url(images/place-1.jpg); ">
 								<a href="#">

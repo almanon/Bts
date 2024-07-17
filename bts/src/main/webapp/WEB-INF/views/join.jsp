@@ -114,11 +114,7 @@
 					<nav id="fh5co-menu-wrap" role="navigation">
 						<ul class="sf-menu" id="fh5co-primary-menu">
 							<li class="active"><a href="index.html">Home</a></li>
-						<li><a href="flight.html">혼잡도</a></li>
-							<li><a href="hotel.html">서울지도</a></li>
-							<li><a href="car.html">길찾기</a></li>
-							<li><a href="blog.html">테마지도</a></li>
-						</ul>
+					
 					</nav>
 				</div>
 			</div>
@@ -127,7 +123,7 @@
 		<!-- end:header-top -->
 	
 		<div class="fh5co-hero">
-			<div class="fh5co-cover" style="background-image: url(/bts/images/mainview2.jpg);">
+			<div class="fh5co-cover" style="background-image: url(/bts/images/img17.jpg);">
 				<div class="desc">
 					<div class="container">
 							<div >
