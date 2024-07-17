@@ -8,7 +8,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>BTS &mdash; Best Tour Seoul!</title>
+	<title>BTS &mdash; Best Traffic Seoul!</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
 	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
@@ -28,16 +28,6 @@
 	//////////////////////////////////////////////////////
 	 -->
 
-  	<!-- Facebook and Twitter integration -->
-	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:site_name" content=""/>
-	<meta property="og:description" content=""/>
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
 
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="shortcut icon" href="favicon.ico">
@@ -48,6 +38,8 @@
 	<link rel="stylesheet" href="css/animate.css">
 	<!-- Icomoon Icon Fonts-->
 	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- font-awesome icon fonts -->
+	<link rel="stylesheet" type="text/css" href="css/font-awesome-4.7.0/css/font-awesome.css">
 	<!-- Bootstrap  -->
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<!-- Superfish -->
@@ -61,7 +53,6 @@
 	<link rel="stylesheet" href="css/cs-skin-border.css">
 	
 	<link rel="stylesheet" href="css/style.css">
-
 	<link rel="stylesheet" type="text/css" href="css/w3.css">
 	<link rel="stylesheet" type="text/css" href="css/user.css">
 
@@ -112,16 +103,12 @@
 			<div class="container">
 				<div class="nav-header">
 					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"><i></i></a>
-					<h1 id="fh5co-logo"><a href="index.html"><i class="icon-aircraft-take-off"></i>BTS</a></h1>
+					<h1 id="fh5co-logo"><a href="index.html"><i class="fa fa-bus"></i>BTS</a></h1>
 					
 <!-- START #fh5co-menu-wrap -->
 					<nav id="fh5co-menu-wrap" role="navigation">
 						<ul class="sf-menu" id="fh5co-primary-menu">
-							<li class="active"><a href="index.html">Home</a></li>						
-							<li><a href="flight.html">혼잡도</a></li>
-							<li><a href="hotel.html">서울지도</a></li>
-							<li><a href="car.html">길찾기</a></li>
-							<li><a href="blog.html">테마지도</a></li>
+							<li class="active"><a href="index.html">Home</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -129,7 +116,7 @@
 		</header>
 <!-- end:header-top -->
 	
-			<div class="fh5co-cover" style="background-image: url(/bts/images/img17.jpg);">
+			<div class="fh5co-cover" style="background-image: url(/bts/images/mainview2.jpg);">
 				<div class="desc" >
 					<div class="container">
 <c:if test="${empty SID}">
@@ -145,14 +132,14 @@
 										<br>
 									
 												<div class="input-field">
-													<label for="id">아이디:</label>
+													<label for="id">ID</label>
 													<input type="text" class="form-control" name="id" id="id" placeholder="아이디를 입력하세요"/>
 												</div> 
 											</div>
 											
 										<div class="col-xxs-12 col-xs-12 mt">
 												<div class="input-field">
-													<label for="pw">비밀번호:</label>
+													<label for="pw">Password</label>
 													<input type="text" class="form-control" name="pw" id="pw" placeholder="비밀번호를 입력하세요"/>
 												</div>
 											</div>
@@ -171,17 +158,17 @@
 								</div>
 							<div class="desc2 animate-box">
 								<div class="col-sm-7 col-sm-push-1 col-sm-7 col-sm-push-1 w3-right">
-									<h2>쾌적한 서울여행!</h2>
-									<h2>B est</h2>
-									<h2>T our</h2>
-									<h2>S eoul</h2>
+									<h2 style="color:rgb(51, 102, 255, 0.7)"><b>쾌적한 서울여행!</b></h2>
+									<h2 style="color:rgb(51, 105, 105)"><b>B</b> est</h2>
+									<h2 style="color:rgb(105, 105, 105)"><b>T</b> raffic</h2>
+									<h2 style="color:rgb(105, 105, 105)"><b>S</b> eoul</h2>
 								</div>
 							</div>
 							
 </c:if>
 <c:if test="${not empty SID}">
 <div class="w3-display-middle w3-center w3-marigin-top">
-    <h3 class="w3-animate-top" style="color:white;">BTS와 함께 서울을 즐겨보세요!</h3>
+    <h3 class="w3-animate-top" style="color:white;"><b>BTS와 함께 서울을 탐험해보세요!</b></h3>
     <hr class="w3-border-white" style="margin:auto;width:40%">
     <p class="w3-large w3-center"></p>
     <div class="col-xs-12"style="margin-bottom:15px;">
@@ -210,7 +197,7 @@
 					<div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
 						<h3>BTS</h3>
 						<p>BTS는 여러분이 쾌적한 환경에서 서울시 대중교통을 이용할 수 있도록 종합적인 정보를 제공합니다. 
-						출발지부터 도착지까지 최적의 경로를 제시하며, 교통 혼잡도를 실시간으로 알려줍니다. 쾌적한 서울여행을 위해 BTS을 이용해 보세요</p>
+						출발지부터 도착지까지 최적의 경로를 제시하며, 주요지점 교통 혼잡도를 실시간으로 알려줍니다. 쾌적한 여정을 위해 준비된 BTS을 이용해 보세요</p>
 					</div>
 				</div>
 
@@ -226,7 +213,7 @@
 							</span>
 							<div class="feature-copy">
 								<h3>지도 제공</h3>
-								<p>BTS는 정확한 서울지도를 제공함으로써 서울여행에 도움을 줍니다.</p>
+								<p>BTS만의 서울지도를 통해 서울 대중교통 이용에 도움을 줍니다.</p>
 							</div>
 						</div>
 
@@ -238,7 +225,7 @@
 								<i class="icon-search2"></i>
 							</span>
 							<div class="feature-copy">
-								<h3>여행 계획</h3>
+								<h3>주요지점 혼잡도</h3>
 								<p>BTS만의 테마지도를 이용해 보다 즐거운 여행계획을 작성해보세요</p>
 							</div>
 						</div>
@@ -250,7 +237,7 @@
 							</span>
 							<div class="feature-copy">
 								<h3>실시간 안내</h3>
-								<p>실시간 제공되는 대중교통 시간표를 통해 여행시간을 절약해보세요</p>
+								<p>실시간 제공되는 대중교통 시간표를 통해 시간을 절약해보세요</p>
 							</div>
 						</div>
 					</div>
@@ -260,7 +247,7 @@
 
 						<div class="feature-left">
 							<span class="icon">
-								<i class="icon-wine"></i>
+								<i class="fa fa-bed"></i>
 							</span>
 							<div class="feature-copy">
 								<h3>편안한 여정</h3>
@@ -273,7 +260,7 @@
 					<div class="col-md-4 animate-box">
 						<div class="feature-left">
 							<span class="icon">
-								<i class="icon-expand"></i>
+								<i class="icon-map22"></i>
 							</span>
 							<div class="feature-copy">
 								<h3>스마트한 서울 문화생활</h3>

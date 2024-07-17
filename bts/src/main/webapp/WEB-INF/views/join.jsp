@@ -49,6 +49,8 @@
 	<link rel="stylesheet" href="css/animate.css">
 	<!-- Icomoon Icon Fonts-->
 	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- font-awesome icon fonts -->
+	<link rel="stylesheet" type="text/css" href="css/font-awesome-4.7.0/css/font-awesome.css">
 	<!-- Bootstrap  -->
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<!-- Superfish -->
@@ -107,7 +109,7 @@
 			<div class="container">
 				<div class="nav-header">
 					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"><i></i></a>
-					<h1 id="fh5co-logo"><a href="index.html"><i class="icon-airplane"></i>BTS</a></h1>
+					<h1 id="fh5co-logo"><a href="index.html"><i class="fa fa-bus"></i>BTS</a></h1>
 					<!-- START #fh5co-menu-wrap -->
 					<nav id="fh5co-menu-wrap" role="navigation">
 						<ul class="sf-menu" id="fh5co-primary-menu">
@@ -125,7 +127,7 @@
 		<!-- end:header-top -->
 	
 		<div class="fh5co-hero">
-			<div class="fh5co-cover" style="background-image: url(/bts/images/img16.jpg);">
+			<div class="fh5co-cover" style="background-image: url(/bts/images/mainview2.jpg);">
 				<div class="desc">
 					<div class="container">
 							<div >
