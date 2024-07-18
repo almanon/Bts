@@ -76,9 +76,9 @@
 			.fh5co-cover {
 			    background-image: url(/bts/images/img17.jpg);
 			    background-attachment: fixed;
-			    background-size: cover; /* Ensure the background covers the entire area */
+			    background-size: cover; 
 			    background-repeat: no-repeat;
-			    min-height: 110vh; /* Set minimum height to 100% of the viewport height */
+			    min-height: 125vh; 
 			}
 		    .w3-hover-pink:hover {
 		        background-color: #ffc0cb !important;
@@ -180,7 +180,9 @@
 	                            <td class="w3-border-right w3-text-bord" style="height:30px; line-height:30px">${GMLIST.game_day}</td>
 	                            <td class="w3-border-right" style="height:30px; line-height:30px">${GMLIST.weekday}</td>
 	                            <td class="w3-border-right" style="height:30px; line-height:30px">${GMLIST.game_time}</td>
-	                            <td class="w3-border-right" style="height:30px; line-height:30px">${GMLIST.home} vs ${GMLIST.away}</td>
+	                            <td class="w3-border-right" style="height:30px; line-height:30px"><img src="/bts/image/logo/${GMLIST.home}.png" alt="${GMLIST.home}" style="width:40px;height:auto;margin-right:5px">
+	                            	${GMLIST.home} vs ${GMLIST.away}
+	                            <img src="/bts/image/logo/${GMLIST.away}.png" alt="${GMLIST.away}" style="width:40px;height:auto;margin-left:5px"></td>
 	                            <td class="w3-border-right" style="height:30px; line-height:30px">${GMLIST.stadium}</td>
                             </form>
                         </tr>

@@ -178,7 +178,7 @@
 								</div>
 							<div class="desc2 animate-box">
 								<div class="col-sm-7 col-sm-push-1 col-sm-7 col-sm-push-1 w3-right">
-									<h2 style="color:#F28444"><b>쾌적한 서울여행!</b></h2>
+									<h2 style="color:#F28444"><b>대중교통 정보</b></h2>
 									<h2 style="color:white"><b style="color:#F28444">B</b> est</h2>
 									<h2 style="color:white"><b style="color:#F28444">T</b> raffic</h2>
 									<h2 style="color:white"><b style="color:#F28444">S</b> eoul</h2>
@@ -212,7 +212,7 @@
 		<div id="fh5co-tours" class="fh5co-section-gray">
 					<div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
 						<h3>BTS</h3><br><br>
-						<p>국민 스포츠 경기장 정보에 특화된 BTS와 함꼐 쾌적하고 편리한 스포츠 관람을 즐겨보세요!<br><br>
+						<p>국민 스포츠 경기장 정보에 특화된 BTS와 함께 쾌적하고 편리한 스포츠 관람을 즐겨보세요!<br><br>
 						
 						   BTS는 여러분이 쾌적한 환경에서 서울시 대중교통을 이용할 수 있도록 종합적인 정보를 제공합니다.
 						   출발지부터 도착지까지 최적의 경로를 제시하며, 주요지점 교통 혼잡도를 실시간으로 알려줍니다.

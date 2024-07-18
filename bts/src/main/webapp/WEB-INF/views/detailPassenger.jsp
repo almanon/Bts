@@ -127,7 +127,7 @@
     }
     .image-container img {
         max-width: 100%;
-        height: 400px;
+        height: 450px;
         border-radius: 10px; /* 이미지 모서리 둥글게 */
     }
     .image-container div {
@@ -196,14 +196,14 @@
                         <div class="left-container">
                             <div class="text-container">
                                 <div class="info-container w3-half w3-center w3-text-grey" style="font-weight:bold;">
-	                                <div class="info-title mgt30">홈</div>
-                                    <div class="mgt20">${DATA.home}</div>
-                                    <div class="mgt30" style="text-align: right;margin-right:60px">경기 시간 : </div>
-                                    <div class="mgt20" style="text-align: right;margin-right:60px">예측 관중수 : </div>
+	                                <div class="info-title mgt30">HOME</div>
+                                    <div class="mgt20" style="margin-right:30px"><img src="/bts/image/logo/${DATA.home}.png" alt="${DATA.home}" style="width:80px;height:80px;margin-right:5px">${DATA.home}</div>
+                                    <div class="mgt30" style="text-align: right;margin-right:40px">경기 시간 : </div>
+                                    <div class="mgt20" style="text-align: right;margin-right:40px">예측 관중수 : </div>
                                 </div>
                                 <div class="info-container w3-half w3-center w3-text-grey" style="font-weight:bold;">
-                                    <div class="info-title mgt30">방문</div>
-                                    <div class="mgt20">${DATA.away}</div>
+                                    <div class="info-title mgt30">AWAY</div>
+                                    <div class="mgt20" style="margin-right:30px"><img src="/bts/image/logo/${DATA.away}.png" alt="${DATA.away}" style="width:80px;height:80px;margin-right:5px">${DATA.away}</div>
                                     <div class="mgt30">${DATA.game_time}</div>
                                     <div class="mgt20">${DATA.crowd} 명</div>
                                 </div>
@@ -217,7 +217,7 @@
                             </div>
                         </div>
                         <div class="image-container">
-                            <h3 style="text-align: center;">종합운동장역 승하차</h3>
+                            <h3 style="text-align: center;font-weight:bold;">종합운동장역 승하차</h3>
                             <img src="http://58.72.151.124:6617/graph/${DATA.game_day}/" alt="Graph Image"/>
                         </div>
                     </div>

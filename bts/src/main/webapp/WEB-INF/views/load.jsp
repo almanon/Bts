@@ -456,8 +456,9 @@
 	                	if (resultJsonData.result.path[l].subPath[1].trafficType == 1) {
 		                		hBtn = '<div class="w3-button w3-super-tiny w3-teal w3-right w3-round-large mgt8 hjdBtn" style="font-weight:bold" data-index="' + l + '">혼잡도 보기</div>'
 		                		startStNm[l] = resultJsonData.result.path[l].subPath[1].startName;
-		                		if (startStNm[l] == "서울역") {
-		                			startStNm[l] == "서울";
+		                		if (startStNm[l] == '서울역') {
+		                			console.log('sdfsdfsdf');
+		                			startStNm[l] == '서울';
 								}
 		                		sbCode[l] = resultJsonData.result.path[l].subPath[1].lane[0].subwayCode;
 		                		upDownCode[l] = resultJsonData.result.path[l].subPath[1].wayCode;
