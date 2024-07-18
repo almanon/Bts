@@ -26,6 +26,9 @@
 	-->
 	<typeAliases>
 		<typeAlias alias="mVO" type="com.human.bts.vo.MemberVO"/>
+		<typeAlias alias="fcVO" type="com.human.bts.vo.FacilityVO"/>
+		<typeAlias alias="gmVO" type="com.human.bts.vo.GameVO"/>
+		<typeAlias alias="page" type="com.human.bts.util.PageUtil"/>
 	<!--  
 		<typeAlias alias="bVO" type="com.human.son.vo.BoardVO"/>
 		<typeAlias alias="fVO" type="com.human.son.vo.FileVO"/>

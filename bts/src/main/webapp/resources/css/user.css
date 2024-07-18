@@ -16,6 +16,9 @@
 .mxw800 {
     max-width: 800px;
 }
+.mxw1000 {
+    max-width: 1000px;
+}
 
 .inblock {
     display: inline-block;
@@ -40,29 +43,22 @@
     padding-left: 15px;
     padding-top: 14px;
 }
-
-.pdr5 {
-    padding-right: 5px;
+.pdb10 {
+    padding-bottom: 10px;
 }
 
 .pdr10 {
     padding-right: 10px;
 }
-
 .pdl10 {
-    padding-left: 10px!important;
+    padding-left: 10px;
 }
-
-.pdl20 {
-    padding-left: 20px!important;
+.pdl15 {
+    padding-left: 15px;
 }
-
-.pdl30 {
-    padding-left: 30px!important;
-}
-
-.pdl50 {
-    padding-left: 50px!important;
+.pdw15{
+	padding-right: 5px;
+	padding-left: 15px;
 }
 
 .pdh10 {
@@ -79,18 +75,17 @@
     padding-top: 30px!important;
     padding-bottom: 30px!important;
 }
-
-.mgr3 {
-    margin-right: 3px;
-}
-.mgr5 {
-    margin-right: 5px;
+.mgt8 {
+    margin-top: 8px;
 }
 .mgt10 {
     margin-top: 10px;
 }
 .mgt20 {
     margin-top: 20px;
+}
+.mgt30 {
+    margin-top: 30px;
 }
 
 .mgb0 {
@@ -114,17 +109,14 @@
     margin-top: 10px!important;
     margin-bottom: 10px!important;
 }
-
 .mgh20 {
     margin-top: 20px!important;
     margin-bottom: 20px!important;
 }
-
-.mgw10 {
-	margin-right: 10px;
-	margin-left: 10px;
+.mgw10{
+	magin-right:10px!important;
+	magin-left:10px!important;
 }
-
 .btnW1 {
     width: 100px;
 }
@@ -155,12 +147,6 @@
     width: 100px;
     height: 120px;
 }
-
-.avtBox2 {
-    width: 200px;
-    height: 200px;
-}
-
 .imgBox {
     width: 98px;
     height: 98px;
@@ -168,12 +154,3 @@
     border: 1px solid lightgrey;
 }
 
-.imgBox100 {
-	width: 100px;
-	height: 100px;
-	overflow: hidden;
-}
-
-.w100 {
-	width: 100px;
-}

@@ -93,6 +93,14 @@
 				$(location).attr('href', '/bts/logout.bts');
 			});
 			
+			$('#findBtn').click(function(){
+				$(location).attr('href', '/bts/load.bts');
+			});
+
+			$('#jsBtn').click(function(){
+				$(location).attr('href', '/bts/gamelist.bts');
+			});
+			
 			
 		});
 	</script>
@@ -105,7 +113,7 @@
 			<div class="container">
 				<div class="nav-header">
 					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"><i></i></a>
-					<h1 id="fh5co-logo"><a href="index.html"><i class="fa fa-bus"></i>BTS</a></h1>
+					<h1 id="fh5co-logo"><a href="/bts/main.bts"><i class="fa fa-bus"></i>BTS</a></h1>
 <c:if test="${not empty SID}">				
 <!-- START #fh5co-menu-wrap -->
 					<nav id="fh5co-menu-wrap" role="navigation">
@@ -186,10 +194,10 @@
     <div class="col-xs-12"style="margin-bottom:15px;">
 											</div>
 											<div class="col-xs-12" style="margin-bottom:15px;">
-												<input type="button" class="btn btn-primary btn-block" value="길찾기">
+												<input type="button" class="btn btn-primary btn-block" id="findBtn" value="길찾기">
 											</div>
 											<div class="col-xs-12" style="margin-bottom:50px;">
-												<input type="button" class="btn btn-primary btn-block" value="상암월드컵경기장 일정 보러가기">
+												<input type="button" class="btn btn-primary btn-block" id="jsBtn" value="잠실종합운동장 일정 보러가기">
 											</div>
 											
   </div>

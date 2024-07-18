@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="fcSQL">
+
+<select id="getAllFacilities" resultType="fcVO">
+    SELECT 
+        ev.운영노선명 laneType,
+        ev.역명 staNm,
+        NVL(ev.elevator_cnt, 0) evCnt,
+        NVL(es.escalator_cnt, 0) esCnt,
+        NVL(cl.chairlift_cnt, 0) clCnt
+    FROM 
+        (SELECT 운영노선명, 역명, COUNT(일련번호) elevator_cnt
+         FROM elevator
+         GROUP BY 운영노선명, 역명) ev
+    LEFT JOIN 
+        (SELECT 운영노선명, 역명, COUNT(일련번호) escalator_cnt
+         FROM escalator
+         GROUP BY 운영노선명, 역명) es
+    ON ev.운영노선명 = es.운영노선명 AND ev.역명 = es.역명
+    LEFT JOIN 
+        (SELECT 운영노선명, 역명, COUNT(일련번호) chairlift_cnt
+         FROM chairlift
+         GROUP BY 운영노선명, 역명) cl
+    ON ev.운영노선명 = cl.운영노선명 AND ev.역명 = cl.역명
+</select>
+</mapper>

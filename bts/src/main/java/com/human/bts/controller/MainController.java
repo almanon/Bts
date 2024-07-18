@@ -1,5 +1,7 @@
 package com.human.bts.controller;
 
+import java.util.List;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +11,8 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;
 
 import com.human.bts.dao.*;
+import com.human.bts.util.PageUtil;
+import com.human.bts.vo.GameVO;
 import com.human.bts.vo.MemberVO;
 
 @Controller
@@ -16,6 +20,10 @@ public class MainController {
 	
 	@Autowired
 	MemberDao mDao;
+	
+	@Autowired
+	GameDao gmDao;
+	
 	
 	
 	@RequestMapping("/main.bts")
@@ -84,4 +92,49 @@ public class MainController {
 		mv.setView(rv);
 		return mv;
 	}
+	
+	@RequestMapping("/load.bts")
+	public String goLoad() {
+		
+		return "load";
+	}
+	
+	
+	
+	@RequestMapping("/gamelist.bts")
+	public ModelAndView goGmList(HttpSession session, ModelAndView mv, RedirectView rv, PageUtil page) {
+		
+		
+		int nowPage = page.getNowPage();
+		if(nowPage == 0) {
+			nowPage = 1;
+		}
+		
+		// 총게시글 갯수 셋팅
+		int totalCnt = gmDao.getTotal();
+		page.setPage(nowPage, totalCnt);
+		mv.addObject("PAGE", page);
+		List<GameVO> list = gmDao.getGmList(page);
+		mv.addObject("GMLIST", list);
+		mv.setViewName("gameList");
+		return mv;
+	}
+	
+	@RequestMapping("/detail.bts")
+	public ModelAndView showGraph(HttpSession session, ModelAndView mv, RedirectView rv,GameVO gmVO) {
+        
+		mv.addObject("DATA", gmVO);
+		mv.setViewName("detailPassenger");
+        return mv;
+    }
+	
+	@RequestMapping("/loadjs.bts")
+	public ModelAndView goLoadToJs(HttpSession session, ModelAndView mv, RedirectView rv,GameVO gmVO) {
+		
+		mv.addObject("DATA", gmVO);
+		mv.setViewName("loadToJs");
+		return mv;
+	}
+	
+	
 }

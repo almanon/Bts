@@ -2,10 +2,15 @@
 <beans
 	xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
-						https://www.springframework.org/schema/beans/spring-beans.xsd">
+						https://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/context
+						https://www.springframework.org/schema/context/spring-context-4.3.xsd">
 	
 	<bean id="mDao" class="com.human.bts.dao.MemberDao" />
+	<bean id="fcDao" class="com.human.bts.dao.FacilityDao" />
+	<bean id="gmDao" class="com.human.bts.dao.GameDao" />
 	<!-- 
 	<bean id="fileUtil" class="com.human.son.util.FileUtil" />
 	<bean id="page" class="com.human.son.util.PageUtil" />

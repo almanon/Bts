@@ -10,6 +10,7 @@ public class MemberDao {
 	SqlSessionTemplate session;
 	
 	public int getLogin(MemberVO mVO) {
+		
 		return session.selectOne("mSQL.login", mVO);
 	}
 	
