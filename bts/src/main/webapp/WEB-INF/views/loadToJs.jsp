@@ -612,11 +612,11 @@
 				                    }
 				                    var facilityInfo = getFacilityData(transportType, startNames[i]);
 				                    
-				                	addInfo[i] += '<div class="w3-col m2 w3-small mgt10"><img src="/image/icon/elevator.png" alt="엘리베이터" title="엘리베이터" style="width:20px;height:20px;"></div>' +
+				                	addInfo[i] += '<div class="w3-col m2 w3-small mgt10"><img src="/bts/image/icon/elevator.png" alt="엘리베이터" title="엘리베이터" style="width:20px;height:20px;"></div>' +
 		    						'<div class="w3-col m2 w3-small mgt10">' + facilityInfo.evCnt + '</div>' +
-		    						'<div class="w3-col m2 w3-small mgt10"><img src="/image/icon/escalator.png" title="에스컬레이터" alt="에스컬레이터" style="width:20px;height:20px;"></div>' +
+		    						'<div class="w3-col m2 w3-small mgt10"><img src="/bts/image/icon/escalator.png" title="에스컬레이터" alt="에스컬레이터" style="width:20px;height:20px;"></div>' +
 		    						'<div class="w3-col m2 w3-small mgt10">' + facilityInfo.esCnt + '</div>' +
-		    						'<div class="w3-col m2 w3-small mgt10"><img src="/image/icon/wheelchair.png" alt="휠체어리프트" title="휠제어리프트" style="width:20px;height:20px;"></i></div>' +
+		    						'<div class="w3-col m2 w3-small mgt10"><img src="/bts/image/icon/wheelchair.png" alt="휠체어리프트" title="휠제어리프트" style="width:20px;height:20px;"></i></div>' +
 		    						'<div class="w3-col m2 w3-samll mgt10">' + facilityInfo.clCnt + '</div>';
 				                	
 			                		if (startNames[i] != '서울역') {
@@ -814,9 +814,37 @@
 	                        var index = $(this).data('index');
 	                        var todayDayType = getDayType();
 	                        if (index == k) {
-		                		
-		                		
-	                            alert("역 정보 : " + startStNm[k] + "| 상하행 : " + upDownCode[k] + "| 호선 : " + sbCode[k] + "| 평일구분 : " + todayDayType); // 혼잡도 정보를 보여주는 로직 추가
+
+	                        	
+                       		      $.ajax({
+                       		        url: 'http://58.72.151.124:6617/plotly/', // Django 서버의 차트 URL로 변경
+                       		        method: 'GET',
+                       		        data: {
+                       		          line: sbCode[k], // 적절한 파라미터 값을 여기에 넣습니다.
+                       		          station: startStNm[k],
+                       		          day_type: todayDayType,
+                       		          direction: upDownCode[k] // 숫자로 넣든 문자로 넣든 다 됨
+                       		        },
+                       		        success: function(data) {
+                       		          console.log("Success:", data);
+                       		          if (data.plotly_data) {
+                       		            $('#chartContainer').html(data.plotly_data);
+                       		            $('#chartModal').css('display', 'block');
+                       		          } else {
+                       		            alert('차트를 불러오는데 실패했습니다.');
+                       		          }
+                       		        },
+                       		        error: function(xhr, status, error) {
+                       		          console.error("Error:", status, error);
+                       		          alert('차트를 불러오는데 실패했습니다.');
+                       		        }
+                       		      });
+
+
+                       		    $('#chartClose, #chartConfirm').click(function(){
+                       		      $('#chartModal').css('display', 'none');
+                       		    });
+
 	                        }
 	                    });
 	                }
@@ -1208,5 +1236,20 @@
 	        </li>      
 	    </ul>
 	</div>
+	
+   		<div id="chartModal" class="w3-modal">
+ 			<div class="w3-modal-content" style="width : 720px ; height : auto ;">
+ 				<header class="w3-container w3-blue">
+ 					<span class="w3-btn w3-display-topright" id="chartClose">&times;</span>
+ 					<h2 class="w3-center">혼잡도 차트</h2>
+ 				</header>
+ 				<div class="w3-container w3-padding">
+ 					<div id="chartContainer"></div>
+ 				</div>
+ 				<footer class="w3-col">
+ 					<div class="w3-col w3-purple w3-btn" id="chartConfirm">확인</div>
+ 				</footer>
+ 			</div>
+ 		</div>
 </body>
 </html>

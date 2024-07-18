@@ -624,11 +624,11 @@
 				                    }
 				                    var facilityInfo = getFacilityData(transportType, startNames[i]);
 				                    
-				                	addInfo[i] += '<div class="w3-col m2 w3-small mgt10"><img src="/image/icon/elevator.png" alt="엘리베이터" title="엘리베이터" style="width:20px;height:20px;"></div>' +
+				                	addInfo[i] += '<div class="w3-col m2 w3-small mgt10"><img src="/bts/image/icon/elevator.png" alt="엘리베이터" title="엘리베이터" style="width:20px;height:20px;"></div>' +
 		    						'<div class="w3-col m2 w3-small mgt10">' + facilityInfo.evCnt + '</div>' +
-		    						'<div class="w3-col m2 w3-small mgt10"><img src="/image/icon/escalator.png" title="에스컬레이터" alt="에스컬레이터" style="width:20px;height:20px;"></div>' +
+		    						'<div class="w3-col m2 w3-small mgt10"><img src="/bts/image/icon/escalator.png" title="에스컬레이터" alt="에스컬레이터" style="width:20px;height:20px;"></div>' +
 		    						'<div class="w3-col m2 w3-small mgt10">' + facilityInfo.esCnt + '</div>' +
-		    						'<div class="w3-col m2 w3-small mgt10"><img src="/image/icon/wheelchair.png" alt="휠체어리프트" title="휠제어리프트" style="width:20px;height:20px;"></i></div>' +
+		    						'<div class="w3-col m2 w3-small mgt10"><img src="/bts/image/icon/wheelchair.png" alt="휠체어리프트" title="휠제어리프트" style="width:20px;height:20px;"></i></div>' +
 		    						'<div class="w3-col m2 w3-samll mgt10">' + facilityInfo.clCnt + '</div>';
 				                	
 			                		if (startNames[i] != '서울역') {
