@@ -127,7 +127,7 @@
 			
 					<nav id="fh5co-menu-wrap" role="navigation">
 						<ul class="sf-menu" id="fh5co-primary-menu">
-							<li class="active" ><a href="#fh5co-section-gray">about</a></li>
+							<li class="active" ><a href="#fh5co-section-gray"></a></li>
 						</ul>
 					</nav>
 </c:if>
@@ -178,7 +178,7 @@
 								</div>
 							<div class="desc2 animate-box">
 								<div class="col-sm-7 col-sm-push-1 col-sm-7 col-sm-push-1 w3-right">
-									<h2 style="color:#F28444"><b>대중교통 정보</b></h2>
+									<h2 style="color:#F28444"><b>야구.. 좋아하세요?</b></h2>
 									<h2 style="color:white"><b style="color:#F28444">B</b> est</h2>
 									<h2 style="color:white"><b style="color:#F28444">T</b> raffic</h2>
 									<h2 style="color:white"><b style="color:#F28444">S</b> eoul</h2>
